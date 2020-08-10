@@ -12,21 +12,23 @@ class FileService
 
     public function uploadFile($file = [])
     {
-        $tempFilePath = $file['tmp_name'];
-        if ($this->allowedFileType($file['type'])) {
-            if($this->fileUploadingError($file['error'])){
-                $fileNewName = uniqid('' , true). ".".$this->allowedFileType($file['type']);
-                $fileDestination = 'Storage/File/' .$fileNewName;
+        try {
+            $tempFilePath = $file['tmp_name'];
+            if ($this->allowedFileType($file['type'])) {
+                if ($this->fileUploadingError($file['error'])) {
+                    $fileNewName = uniqid('', true) . "." . $this->allowedFileType($file['type']);
+                    $fileDestination = 'Storage/File/' . $fileNewName;
 
-                if(move_uploaded_file($tempFilePath,$fileDestination)){
-                    return "Successfully upload file";
-                } else {
-                    return "Cannot upload file, please try again";
+                    if (move_uploaded_file($tempFilePath, $fileDestination)) {
+                        return "Successfully upload file";
+                    } else {
+                        throw new Exception('Cannot upload file, please try again');
+                    }
                 }
             }
-            return "Error, while uploading file";
+        } catch (Exception $e){
+            return $e->getMessage();
         }
-        return "File Type is not Accepted, Please Select jpeg, jpg, png";
     }
 
     public function allowedFileType($fileType)
@@ -36,15 +38,17 @@ class FileService
 
         if (in_array($type, $allowedFileType)) {
             return $type;
+        } else {
+            throw new Exception('File Type is not Accepted, Please Select jpeg, jpg, png');
         }
-        return false;
     }
 
     public function fileUploadingError($fileError)
     {
         if (!$fileError) {
             return true;
+        } else {
+            throw new Exception('Error, while uploading file');
         }
-        return false;
     }
 }
