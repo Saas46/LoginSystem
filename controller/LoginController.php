@@ -9,7 +9,7 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->service = new LoginService();
-        $this->token = new Token();
+        $this->token = new CSRFToken();
     }
 
     public function index()

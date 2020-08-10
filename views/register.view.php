@@ -1,5 +1,5 @@
 <?php
-$token = new Token();
+$token = new CSRFToken();
 ?>
 
 <!doctype html>
@@ -66,7 +66,7 @@ $token = new Token();
                         <?php endif; ?>
                     </div>
                     <input type="hidden" name="token" value="<?php echo $token->generate();?>">
-                    <button type="submit" class="btn btn-primary btn-block mt-3">Register</button>
+                    <button type="submit" name="submit" class="btn btn-primary btn-block mt-3">Register</button>
                 </form>
             </section>
         </section>

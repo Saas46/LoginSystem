@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CSRFToken' => $baseDir . '/core/CSRFToken.php',
     'ComposerAutoloaderInitf15c9ecacce76cae6a8c3b3513930a24' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInitf15c9ecacce76cae6a8c3b3513930a24' => $vendorDir . '/composer/autoload_static.php',
@@ -20,7 +21,5 @@ return array(
     'Request' => $baseDir . '/core/Request.php',
     'Router' => $baseDir . '/core/Router.php',
     'Session' => $baseDir . '/core/Session.php',
-    'Token' => $baseDir . '/core/Token.php',
     'UserRepository' => $baseDir . '/Repository/UserRepository.php',
-    'Validate' => $baseDir . '/core/Validate.php',
 );

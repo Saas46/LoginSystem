@@ -7,6 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInitf15c9ecacce76cae6a8c3b3513930a24
 {
     public static $classMap = array (
+        'CSRFToken' => __DIR__ . '/../..' . '/core/CSRFToken.php',
         'ComposerAutoloaderInitf15c9ecacce76cae6a8c3b3513930a24' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInitf15c9ecacce76cae6a8c3b3513930a24' => __DIR__ . '/..' . '/composer/autoload_static.php',
@@ -21,9 +22,7 @@ class ComposerStaticInitf15c9ecacce76cae6a8c3b3513930a24
         'Request' => __DIR__ . '/../..' . '/core/Request.php',
         'Router' => __DIR__ . '/../..' . '/core/Router.php',
         'Session' => __DIR__ . '/../..' . '/core/Session.php',
-        'Token' => __DIR__ . '/../..' . '/core/Token.php',
         'UserRepository' => __DIR__ . '/../..' . '/Repository/UserRepository.php',
-        'Validate' => __DIR__ . '/../..' . '/core/Validate.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

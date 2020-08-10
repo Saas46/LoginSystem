@@ -1,6 +1,6 @@
 <?php
 
-class Token {
+class CSRFToken {
 
     protected $session;
     public function __construct()
