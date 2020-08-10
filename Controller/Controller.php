@@ -9,7 +9,7 @@ class Controller
      * @param array $data
      * @return mixed
      */
-    public function view($name , $data = [])
+    protected function view($name , $data = [])
     {
         extract($data);
         return require 'views/' . $name . '.view.php';
