@@ -13,21 +13,25 @@ class FileService
     public function uploadFile($file = [])
     {
         try {
-            $tempFilePath = $file['tmp_name'];
-            if ($this->allowedFileType($file['type'])) {
-                if ($this->fileUploadingError($file['error'])) {
-                    $fileNewName = uniqid('', true) . "." . $this->allowedFileType($file['type']);
-                    $fileDestination = 'Storage/File/' . $fileNewName;
-
-                    if (move_uploaded_file($tempFilePath, $fileDestination)) {
-                        return "Successfully upload file";
-                    } else {
-                        throw new Exception('Cannot upload file, please try again');
-                    }
+            if ($this->fileUploadingError($file['error'])) {
+                if ($this->allowedFileType($file['type'])) {
+                    return $this->uploadFileInNewPath($file['tmp_name'], $file['type']);
                 }
             }
         } catch (Exception $e){
             return $e->getMessage();
+        }
+    }
+
+    public function uploadFileInNewPath($tempFilePath, $fileType)
+    {
+        $fileNewName = uniqid('', true) . "." . $this->allowedFileType($fileType);
+        $fileDestination = 'Storage/File/' . $fileNewName;
+
+        if (move_uploaded_file($tempFilePath, $fileDestination)) {
+            return "Successfully upload file";
+        } else {
+            throw new Exception('Cannot upload file, please try again');
         }
     }
 
