@@ -1,7 +1,7 @@
 # LogIn Applicaiton
 
 Simple Login Application build using Vanilla PHP. 
-Some of the area that I have covered Some of the area that I have covered in this test are as follow : -
+Some of the area that I have covered in this test are as follow : -
  - MVC
  - OOP 
  - Service and Repository Pattern
