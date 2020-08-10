@@ -49,9 +49,9 @@ class LoginController extends Controller
     {
         if ($request) {
             if ($this->token->check($request->token, 'token')) {
-                if($this->service->isPasswordMatched($request)){
+                if ($this->service->isPasswordMatched($request)) {
                     // if Email doesnt exist then register
-                    if (!$this->service->isEmailExist($request)){
+                    if (!$this->service->isEmailExist($request)) {
                         $this->service->registerUser($request);
                         if (!$this->service->isUserLoggedIn()) {
                             return $this->view('login');
@@ -60,13 +60,10 @@ class LoginController extends Controller
                         return $this->view('register', ['errorEmail' => 'Email Already Exist']);
                     }
                 } else {
-                    return $this->view('register', ['errorPassword'=> 'Password Didnt Match']);
+                    return $this->view('register', ['errorPassword' => 'Password Didnt Match']);
                 }
-                return $this->view('register');
             }
-            return $this->view('register');
-        } else {
-            return $this->view('register');
         }
+        return $this->view('register');
     }
 }
