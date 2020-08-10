@@ -1,6 +1,21 @@
 # LogIn Applicaiton
 
-Simple Login Application build using Vanilla PHP
+Simple Login Application build using Vanilla PHP. 
+Some of the area that I have covered Some of the area that I have covered in this test are as follow : -
+ - MVC
+ - OOP 
+ - Service and Repository Pattern
+ - Routing 
+ - Composer Autoloader
+ - CSRF Token
+ - Hash
+ - Session
+ - HTML Sanitiser and filter_var
+ - Preventing SQL Injection using PDO
+ - Request 
+ - File Upload
+ - .htaccess
+
 
 ## Getting Started
 
