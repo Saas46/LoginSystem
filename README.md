@@ -7,7 +7,14 @@ Simple Login Application build using Vanilla PHP
 
 ### Prerequisites
 
-PHP, MYSQL OR MAMP/WAMP. Database config can set on Core/Database/Config
+ - PHP 
+ - MYSQL 
+ OR 
+ - MAMP/WAMP. 
+ 
+ Database config can set on Core/Database/Config.
+
+To Generate SQL Table there is homestead.sql in root folder
 
 #### Tree Structure of Application
 ```
@@ -55,3 +62,4 @@ PHP, MYSQL OR MAMP/WAMP. Database config can set on Core/Database/Config
         └── register.view.php
 
 ```
+
