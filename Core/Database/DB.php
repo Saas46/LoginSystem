@@ -16,7 +16,7 @@ class DB
                 $config->password
             );
         } catch (PDOException $e) {
-            die($e->getMessage() . 'Something went wrong while connecting with database');
+            die($e->getMessage() . 'Something went wrong while connecting with Database');
         }
     }
 

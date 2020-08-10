@@ -7,21 +7,21 @@ namespace Composer\Autoload;
 class ComposerStaticInitf15c9ecacce76cae6a8c3b3513930a24
 {
     public static $classMap = array (
-        'CSRFToken' => __DIR__ . '/../..' . '/core/CSRFToken.php',
+        'CSRFToken' => __DIR__ . '/../..' . '/Core/CSRFToken.php',
         'ComposerAutoloaderInitf15c9ecacce76cae6a8c3b3513930a24' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInitf15c9ecacce76cae6a8c3b3513930a24' => __DIR__ . '/..' . '/composer/autoload_static.php',
-        'Config' => __DIR__ . '/../..' . '/core/database/Config.php',
-        'Controller' => __DIR__ . '/../..' . '/controller/Controller.php',
-        'DB' => __DIR__ . '/../..' . '/core/database/DB.php',
+        'Config' => __DIR__ . '/../..' . '/Core/Database/Config.php',
+        'Controller' => __DIR__ . '/../..' . '/Controller/Controller.php',
+        'DB' => __DIR__ . '/../..' . '/Core/Database/DB.php',
         'FileService' => __DIR__ . '/../..' . '/Service/FileService.php',
-        'Hash' => __DIR__ . '/../..' . '/core/Hash.php',
-        'HomeController' => __DIR__ . '/../..' . '/controller/HomeController.php',
-        'LoginController' => __DIR__ . '/../..' . '/controller/LoginController.php',
+        'Hash' => __DIR__ . '/../..' . '/Core/Hash.php',
+        'HomeController' => __DIR__ . '/../..' . '/Controller/HomeController.php',
+        'LoginController' => __DIR__ . '/../..' . '/Controller/LoginController.php',
         'LoginService' => __DIR__ . '/../..' . '/Service/LoginService.php',
-        'Request' => __DIR__ . '/../..' . '/core/Request.php',
-        'Router' => __DIR__ . '/../..' . '/core/Router.php',
-        'Session' => __DIR__ . '/../..' . '/core/Session.php',
+        'Request' => __DIR__ . '/../..' . '/Core/Request.php',
+        'Router' => __DIR__ . '/../..' . '/Core/Router.php',
+        'Session' => __DIR__ . '/../..' . '/Core/Session.php',
         'UserRepository' => __DIR__ . '/../..' . '/Repository/UserRepository.php',
     );
 

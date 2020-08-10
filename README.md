@@ -7,7 +7,9 @@ Simple Login Application build using Vanilla PHP
 
 ### Prerequisites
 
-PHP, MYSQL OR MAMP/WAMP
-```
+PHP, MYSQL OR MAMP/WAMP. Database config can set on Core/Database/Config
 
+#### Tree Structure of Application
+```
+    
 ```
