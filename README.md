@@ -1,6 +1,6 @@
 # LogIn Applicaiton
 
-Simple Login Application build using Vanilla PHP. 
+Simple Login Application build using Vanilla PHP. It follows the Laravel Framework Style. 
 Some of the area that I have covered as follow : -
  - MVC
  - OOP 
